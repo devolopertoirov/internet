@@ -28,6 +28,9 @@ jobs:
       - name: Get dependencies
         run: flutter pub get
 
+      - name: Generate Android Platform Files
+        run: flutter create . --platforms=android
+
       - name: Build APK
         run: flutter build apk --release --no-tree-shake-icons
 
